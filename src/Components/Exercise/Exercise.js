@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import Cards from '../Cards/Cards';
+import Sidebar from '../Sidebar/Sidebar';
 import './Exercise.css';
 // import '../../../public/gym.json'
 
 const Exercise = () => {
-    const [exercise, setExercise] = useState([]);
+    const [exercises, setExercise] = useState([]);
     
     useEffect(() => {
         fetch(`https://mocki.io/v1/b2af8258-d97d-49ff-8da5-fc3512e3e373`)
@@ -11,12 +13,33 @@ const Exercise = () => {
             .then(data => setExercise(data));
         
     
-}, [exercise]);
+}, [exercises]);
 
     return (
-        <div>
-            
+            <div className="container flex ">
+                <div className="left-side w-5/6">
+                <div className="text-xl mx-10">
+                <h2 className="font-extrabold">Diamond Gym</h2>
+                <h4 className="font-light">Select your exercise</h4>
+            </div>
+            <div className="exercises">
+                {
+                    exercises.map(exercise =>
+                        <Cards exercise={exercise} key={exercise.id}></Cards>
+                    
+                      
+                    )
+                }
+                </div>
+               
+            </div>
+                <div className="right-side w-1/6 mx-5">
+                    <div className="Sidebar w-full mx-5">
+                        <Sidebar></Sidebar>
+                    </div>
+                </div>
         </div>
+    
     );
 };
 

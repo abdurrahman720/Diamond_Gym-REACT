@@ -1,0 +1,16 @@
+
+
+.left-side{
+    padding: 40px;
+    background-color: rgb(252, 242, 242);
+}
+
+.text{
+    text-align: start;
+}
+
+.exercises{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
