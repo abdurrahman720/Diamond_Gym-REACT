@@ -1,12 +1,20 @@
 import React from 'react';
 
-const Details = ({ times }) => {
+const Details = ({ times, bt }) => {
     
     return (
-        <div className="flex justify-between bg-slate-200 rounded p-5 w-80">
+        <div>
+            <div className="flex justify-between bg-slate-200 rounded p-5 w-80">
             <p className="font-bold">Exercise Time</p>
             <p className="font-extralight"> {times} seconds</p>
+            </div>
+            <div className="flex mt-5 justify-between bg-slate-200 rounded p-5 w-80">
+            <p className="font-bold">Break Time</p>
+            <p className="font-extralight"> {bt} seconds</p>
+            </div>
+            <button className="btn rounded w-80 mt-5">Activity Completed</button>
         </div>
+        
     );
 };
 

@@ -2,8 +2,17 @@ import './Sidebar.css'
 
 import React from 'react';
 import Details from '../Details/Details';
+import { useState } from 'react';
 
 const Sidebar = ({ times, setTimes }) => {
+
+    const [bt, setBT] = useState(0);
+    
+    const addBreak = (e) => {
+        const breakTime = e.target.value;
+        setBT(breakTime);
+        console.log(bt);
+    }
   
     return (
         <div className="bg-white">
@@ -38,16 +47,17 @@ const Sidebar = ({ times, setTimes }) => {
             <p className="font-bold text-lg my-5">Add a Break</p>
 
             <div className="flex justify-between bg-slate-200 rounded p-5 w-80">
-                <button className="btn btn-circle ">10 <sub>s</sub></button>
-                <button className="btn btn-circle ">20<sub>s</sub></button>
-                <button className="btn btn-circle ">30<sub>s</sub></button>
-                <button className="btn btn-circle ">40<sub>s</sub></button>
+                <button onClick={addBreak} className="btn btn-circle" value="10">10<sub>s</sub></button>
+                <button onClick={addBreak} className="btn btn-circle" value="20">20<sub>s</sub></button>
+                <button onClick={addBreak} className="btn btn-circle" value="30">30<sub>s</sub></button>
+                <button onClick={addBreak} className="btn btn-circle" value="40">40<sub>s</sub></button>
              </div>
           
             <p className="font-bold text-lg mt-10 mb-5">Exercise Details</p>
             <div>
-                <Details times={times}></Details>
+                <Details times={times} bt={bt}></Details>
             </div>
+           
         </div>
     );
 };
