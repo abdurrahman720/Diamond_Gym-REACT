@@ -25,13 +25,7 @@ const Details = ({ times, bt }) => {
             <p className="font-extralight"> {bt} seconds</p>
             </div>
             <button className="btn rounded w-80 mt-5">Activity Completed</button>
-            <div className="toast">
-            <div className="alert alert-info">
-                <div>
-                <span>Activity Completed.</span>
-                </div>
-            </div>
-        </div>
+           
         </div>
         
         
