@@ -1,9 +1,16 @@
+import React, { useState } from 'react';
 
+const Cards = ({ exercise , setTimes, times }) => {
+  const { id, picture, name, about, time, age } = exercise;
+  
 
-import React from 'react';
+  const addTolist = (t) => {
+    const newTime = times + t;
+    setTimes(newTime);
 
-const Cards = ({ exercise }) => {
-    const { id, picture, name , about, time, age } = exercise;
+    console.log(times);
+  } 
+
     return (
         <div>
                    <div className="card w-46 h-100 m-5 bg-base-100 shadow-xl">
@@ -16,7 +23,7 @@ const Cards = ({ exercise }) => {
                     <p>For age: {age}</p>
                     <p>Time required: {time}</p>
     <div className="card-actions">
-      <button className="btn btn-primary">Add to List</button>
+      <button onClick={()=>addTolist(time)} className="btn btn-primary">Add to List</button>
     </div>
   </div>
 </div>

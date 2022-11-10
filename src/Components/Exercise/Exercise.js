@@ -6,7 +6,8 @@ import './Exercise.css';
 
 const Exercise = () => {
     const [exercises, setExercise] = useState([]);
-    
+    const [times, setTimes] = useState(0);
+
     useEffect(() => {
         fetch(`https://mocki.io/v1/b2af8258-d97d-49ff-8da5-fc3512e3e373`)
             .then(res => res.json())
@@ -25,7 +26,7 @@ const Exercise = () => {
             <div className="exercises grid grid-cols-1 grid-row-1 md:grid-cols-2 lg:grid-cols-3">
                 {
                     exercises.map(exercise =>
-                        <Cards exercise={exercise} key={exercise.id}></Cards>
+                        <Cards exercise={exercise} setTimes={setTimes} times={times} key={exercise.id}></Cards>
                     
                       
                     )
@@ -35,7 +36,7 @@ const Exercise = () => {
             </div>
                 <div className="right-side w-1/6 mx-5">
                     <div className="Sidebar w-full mx-5">
-                        <Sidebar></Sidebar>
+                        <Sidebar times={times} setTimes={setTimes}></Sidebar>
                     </div>
                 </div>
         </div>
