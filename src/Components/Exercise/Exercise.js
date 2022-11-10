@@ -3,13 +3,14 @@ import Cards from '../Cards/Cards';
 import Sidebar from '../Sidebar/Sidebar';
 import './Exercise.css';
 // import '../../../public/gym.json'
+// https://mocki.io/v1/b2af8258-d97d-49ff-8da5-fc3512e3e373
 
 const Exercise = () => {
     const [exercises, setExercise] = useState([]);
     const [times, setTimes] = useState(0);
 
     useEffect(() => {
-        fetch(`https://mocki.io/v1/b2af8258-d97d-49ff-8da5-fc3512e3e373`)
+        fetch('https://mocki.io/v1/b2af8258-d97d-49ff-8da5-fc3512e3e373')
             .then(res => res.json())
             .then(data => setExercise(data));
         

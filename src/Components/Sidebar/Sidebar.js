@@ -11,9 +11,18 @@ const Sidebar = ({ times, setTimes }) => {
     const addBreak = (e) => {
         const breakTime = e.target.value;
         setBT(breakTime);
-        localStorage.setItem('times',JSON.stringify(bt));
+        localStorage.setItem('times', JSON.stringify(bt));
+    
     }
     
+  
+    const addToDb = () => {
+        const breakTime = localStorage.getItem('times');
+        const newBreakTime = JSON.parse(breakTime);
+        setBT(newBreakTime);
+  
+       }
+
   
     return (
         <div className="bg-white">
