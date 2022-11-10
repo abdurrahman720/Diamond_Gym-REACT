@@ -16,13 +16,13 @@ const Exercise = () => {
 }, [exercises]);
 
     return (
-            <div className="container flex ">
+            <div className="container flex flex-col md:flex-row justify-evenly ">
                 <div className="left-side w-5/6">
-                <div className="text-xl mx-10">
-                <h2 className="font-extrabold">Diamond Gym</h2>
-                <h4 className="font-light">Select your exercise</h4>
-            </div>
-            <div className="exercises">
+                    <div className="text-xl mx-10">
+                    <h2 className="font-extrabold">Diamond Gym</h2>
+                    <h4 className="font-light">Select your exercise</h4>
+                    </div>
+            <div className="exercises grid grid-cols-1 grid-row-1 md:grid-cols-2 lg:grid-cols-3">
                 {
                     exercises.map(exercise =>
                         <Cards exercise={exercise} key={exercise.id}></Cards>

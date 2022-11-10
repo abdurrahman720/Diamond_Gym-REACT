@@ -16,23 +16,42 @@ const Sidebar = () => {
             </div>
             <div className="stats stats-vertical lg:stats-horizontal shadow">
   
-  <div className="stat">
-    <div className="stat-value">75<span className="stat-text">kg</span></div>
-    <div className="stat-desc">Weight</div>
-  </div>
+                <div className="stat">
+                    <div className="stat-value">75<span className="stat-text">kg</span></div>
+                    <div className="stat-desc">Weight</div>
+                </div>
+                
+                <div className="stat">
+                
+                    <div className="stat-value">6.5</div>
+                    <div className="stat-desc">Height</div>
+                </div>
+                
+                <div className="stat">
+                    <div className="stat-value">25<span className="stat-text">yrs</span> </div>
+                    <div className="stat-desc">Age</div>
+                </div>
   
-  <div className="stat">
+            </div>
+            <p className="font-bold text-lg my-5">Add a Break</p>
+            <div className="stats stats-vertical lg:stats-horizontal shadow">
   
-    <div className="stat-value">6.5</div>
-    <div className="stat-desc">Height</div>
-  </div>
-  
-  <div className="stat">
-    <div className="stat-value">25<span className="stat-text">yrs</span> </div>
-    <div className="stat-desc">Age</div>
-  </div>
-  
-</div>
+                    <div className="stat">
+                        <button className="rounded-full bg-slate-500 p-2">10s</button>
+                    </div>
+                    <div className="stat">
+                        <button className="rounded-full bg-slate-500 p-2">20s</button>
+                    </div>
+                    <div className="stat">
+                        <button className="rounded-full bg-slate-500 p-2">30s</button>
+                    </div>
+                    <div className="stat">
+                        <button className="rounded-full bg-slate-500 p-2">40s</button>
+                    </div>
+
+            </div>
+            <p className="font-bold text-lg mt-10">Exercise Details</p>
+            
         </div>
     );
 };
