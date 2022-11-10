@@ -35,7 +35,7 @@ const Sidebar = ({ times, setTimes }) => {
                     <div className="font-extralight">Sydney,Australia</div>
                 </div>
             </div>
-            <div className="stats stats-vertical lg:stats-horizontal shadow">
+            <div className=" flex justify-between bg-slate-200 rounded p-5 w-80">
   
                 <div className="stat">
                     <div className="stat-value">75<span className="stat-text">kg</span></div>
@@ -49,7 +49,7 @@ const Sidebar = ({ times, setTimes }) => {
                 </div>
                 
                 <div className="stat">
-                    <div className="stat-value">25<span className="stat-text">yrs</span> </div>
+                    <div className="stat-value">25<span className="stat-text">yr</span> </div>
                     <div className="stat-desc">Age</div>
                 </div>
   
